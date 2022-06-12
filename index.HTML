@@ -11,12 +11,51 @@
 <body>
     <div class="content">
         <div class="sidePanel">
-            
         </div>
         <div class="page">
             <div class="infoText">
                 <p>Thank you for your interest in joining the English lessons! Although not ready yet, please feel free to enter your information into this fake form and we will not email you back with more information!</p>
             </div>
+            <form action="example.com/path" method="post">
+                <ul>
+                    <li>
+                        <label for="name">FIRST NAME:</label>
+                        <input type="text" id="name" name="user_name">
+                    </li>
+                    <li>
+                    <label for="surname">LAST NAME:</label>
+                    <input type="text" id="surname" name="user_surname">
+                    </li>
+                    <li>
+                        <label for="mail">EMAIL</label>
+                        <input type="email" id="mail" name="user_email">
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <label for="pwd">
+                            PASSWORD
+                        </label>
+                        <input type="password" id="pwd" name="password">
+                    </li>
+                    <li>
+                        <label for="pwd">
+                            CONFIRM PASSWORD
+                        </label>
+                        <input type="password" id="pwd" name="password">
+                    </li>
+                    <li>
+                        <label for="n1">PHONE NUMBER</label>
+                        <!-- The pattern attribute can act as a fallback for browsers which
+                             don't implement the number input type but support the pattern attribute.
+                             Please note that browsers that support the pattern attribute will make it
+                             fail silently when used with a number field.
+                             Its usage here acts only as a fallback -->
+                        <input type="number" id="n1" name="phoneNumber">
+                    </li>
+                </ul>
+               
+            </form>
         </div>
     </div>
   <script src="script.js"></script>

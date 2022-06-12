@@ -12,18 +12,18 @@ body {
     display: flex;
 }
 
-.sidepanel {
+.sidePanel {
     width: 40%;
     height: 100vh;
     background: url(https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80) no-repeat center center / auto 100%;
 }
 
 .page {
-     width: clamp(45ch, 50%, 75ch);
-  display: flex;
-  flex-direction: column;
-  background: white;
-  padding: 1rem;
+    width: clamp(45ch, 60%, 75ch);
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 1rem;
 }
 
 .infoText {
@@ -32,4 +32,37 @@ body {
     border: solid green 2px; 
 }
 
+form {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    /* Center the form on the page */
+  margin: 0 auto;
+  width: clamp(45ch, 60%, 75ch);
+    /* Form outline */
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: clamp(45ch, 60%, 75ch);
+}
+
+form li+li {
+  margin-top: 1em;
+}
+
+input{
+    /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+/* Uniform text field size */
+  box-sizing: border-box;
+  width: 60%;
+/*Match form field borders */
+  border: 1px solid #999;
+}
