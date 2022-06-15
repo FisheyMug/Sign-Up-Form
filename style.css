@@ -6,55 +6,69 @@ body {
 }
 
 .content {
-    border: 2px solid red;
-    width: 65%;
+    width: 80%;
     height: 100vh;
     display: flex;
 }
 
 .sidePanel {
     width: 40%;
-    height: 100vh;
     background: url(https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80) no-repeat center center / auto 100%;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(192,192,192,0.25);
+    margin: 0 auto;
+    margin-top: 10rem;
+    padding: 0;
+    height: 75px;
 }
 
 .page {
     width: clamp(45ch, 60%, 75ch);
     display: flex;
     flex-direction: column;
-    background: white;
-    padding: 1rem;
+    background: whitesmoke;
+    padding: 5px;
 }
 
 .infoText {
-    font-size: 16px;
-    font-weight: bold;
-    border: solid green 2px; 
+    font-size: 14px;
+    font-weight: 535;
+    padding: 15px;
+    margin-top: 50px;
 }
 
 form {
-    font-size: 12px;
+    font-size: 0.8rem;
     display: flex;
     flex-direction: row;
-    /* Center the form on the page */
-  margin: 0 auto;
-  width: clamp(45ch, 60%, 75ch);
+    flex-wrap: wrap;
+    margin-top: 15px;
     /* Form outline */
-  padding: 1em;
-  border: 1px solid #ccc;
-  border-radius: 1em;
+    padding: 10px;
+    box-shadow: 0 4px 2px -2px gray;
+    background-color: white;
+}
+
+label {
+    font-size: 0.7rem;
+}
+
+section {
+    width: 47%;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  width: clamp(45ch, 60%, 75ch);
 }
 
-form li+li {
-  margin-top: 1em;
-}
 
 input{
     /* To make sure that all text fields have the same font settings
@@ -62,7 +76,52 @@ input{
   font: 1em sans-serif;
 /* Uniform text field size */
   box-sizing: border-box;
-  width: 60%;
+  width: 95%;
 /*Match form field borders */
   border: 1px solid #999;
+}
+
+input, textarea{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+label,input{
+  display:flex;
+  flex-direction:column;
+}
+
+p {
+    width: 100%;
+    margin: 0;
+}
+
+button {
+    padding: 5px;
+    margin: 15px;
+    background-color: #596D48;
+    color: whitesmoke;
+    border: 0;
+    border-radius: 2px;
+}
+
+a {
+    color: #596D48;
+    text-decoration: underline;
+}
+
+input:focus {
+    outline-color: royalblue ;
+    border: 1px blue solid;
+    box-shadow: 0 2px 2px 1px gray;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+::placeholder {
+  font-size: 0.7rem;
 }

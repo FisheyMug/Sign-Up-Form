@@ -11,51 +11,59 @@
 <body>
     <div class="content">
         <div class="sidePanel">
+            <div class= "logo">
+                <img src="https://text2image.com/user_images/202206/text2image_M7968973_20220613_013739.png">
+            </div>
         </div>
         <div class="page">
             <div class="infoText">
-                <p>Thank you for your interest in joining the English lessons! Although not ready yet, please feel free to enter your information into this fake form and we will not email you back with more information!</p>
+                <p>Thank you for your interest in joining the English lessons! Although not ready yet, please feel free to enter your information into this fake form and we will not email you back with more information! <br><br> Give it a Go!!</p>
             </div>
-            <form action="example.com/path" method="post">
-                <ul>
+            <form action="example.com/path" method="post" id="my_form">
+                <p>Let's Do This!</p>
+                <section>
+                    <ul>
                     <li>
-                        <label for="name">FIRST NAME:</label>
-                        <input type="text" id="name" name="user_name">
-                    </li>
-                    <li>
-                    <label for="surname">LAST NAME:</label>
-                    <input type="text" id="surname" name="user_surname">
+                        <label for="name">FIRST NAME</label>
+                        <input type="text" id="name" name="user_name" placeholder="Jack" >
                     </li>
                     <li>
                         <label for="mail">EMAIL</label>
-                        <input type="email" id="mail" name="user_email">
+                        <input type="email" id="mail" name="user_email" placeholder="email@address.com" >
                     </li>
-                </ul>
-                <ul>
-                    <li>
+                         <li>
                         <label for="pwd">
                             PASSWORD
                         </label>
-                        <input type="password" id="pwd" name="password">
+                        <input type="password" id="pwd" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" title="Please enter a minimum eight characters, at least one uppercase letter, one lowercase letter and one number:" onChange="onChange()" placeholder="Enter a password" >
                     </li>
+                </ul>
+                </section>
+                <section>
+                     <ul>
+                         <li>
+                    <label for="surname">LAST NAME</label>
+                    <input type="text" id="surname" name="user_surname" placeholder="Dizzle" >
+                    </li>
+                         <li>
+                        <label for="n1">PHONE NUMBER</label>
+                        <input type="text" id="n1" name="phoneNumber" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}" title="Please input a valid phone Number" placeholder="123-456-7890" >
+                    </li>
+                       
                     <li>
                         <label for="pwd">
                             CONFIRM PASSWORD
                         </label>
-                        <input type="password" id="pwd" name="password">
+                        <input name="confirm" type="password" id="confirm" onChange="onChange()" placeholder="Confrim Password" >
                     </li>
-                    <li>
-                        <label for="n1">PHONE NUMBER</label>
-                        <!-- The pattern attribute can act as a fallback for browsers which
-                             don't implement the number input type but support the pattern attribute.
-                             Please note that browsers that support the pattern attribute will make it
-                             fail silently when used with a number field.
-                             Its usage here acts only as a fallback -->
-                        <input type="number" id="n1" name="phoneNumber">
-                    </li>
+                    
                 </ul>
-               
+                </section>
             </form>
+            <p>
+                    <button type="submit" form="my_form">Continue</button>
+                </p>
+            <p>Already have an account? <a href="">Log in</a></p>
         </div>
     </div>
   <script src="script.js"></script>
